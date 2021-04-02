@@ -41,7 +41,7 @@ void printArray(int arr[], int size)
 int main()
 {
 	int *a,i,j,k,n,count=0,cbest=0,cworst=0,cavg=0;
-	int x=10,y=400,inc=10;
+	int x=10,y=400,inc=20;
 	FILE *ptr,*fptr;
 	system("rm binaryS.txt");
 	system("rm binaryScount_operations.txt");
@@ -56,10 +56,10 @@ int main()
 	          {
 	             //a[i]=rand()%1000;
 	             //a[i]=(n-i)*10-100;
-	             a[i]=(i+1)*4;
+	             a[i]=(i+1);
 	          }
 	       fprintf(fptr,"Iteration:");
-	       k=a[0];
+	       k=4000;
 	       j=bubbleSort(a,0, n-1,&count,k);
 	for(i=0;i<n;i++)
 	   {
