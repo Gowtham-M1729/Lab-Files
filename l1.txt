@@ -5,5 +5,5 @@ set xlabel 'Input size (n)'
 set ylabel 'Operation Count'
 set style data linespoints
 
-plot "binaryScount_opertaion.txt" title 'Worstcase'
+plot "count_operation.txt" title 'Worstcase'
 

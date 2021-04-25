@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include<time.h>
 #include<stdlib.h>
+#include<math.h>
 
 
 void swap(int *xp, int *yp)
@@ -41,14 +42,14 @@ void printArray(int arr[], int size)
 int main()
 {
 	int *a,i,j,k,n,count=0,cbest=0,cworst=0,cavg=0;
-	int x=10,y=400,inc=20;
+	int x=10,y=100000,inc=10;
 	FILE *ptr,*fptr;
 	system("rm binaryS.txt");
 	system("rm binaryScount_operations.txt");
 	srand(time(NULL));
 	
 	
-	for(n=x;n<=y;n+=inc)
+	for(n=x;n<=y;n=n*2)
 	   { count=1;
 	     fptr=fopen("binaryS.text","a");
 	     a=(int*)malloc(n*sizeof(int));
@@ -59,7 +60,7 @@ int main()
 	             a[i]=(i+1);
 	          }
 	       fprintf(fptr,"Iteration:");
-	       k=4000;
+	       k=a[n-1];
 	       j=bubbleSort(a,0, n-1,&count,k);
 	for(i=0;i<n;i++)
 	   {
